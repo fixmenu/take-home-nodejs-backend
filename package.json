@@ -9,16 +9,24 @@
     "lint": "./node_modules/.bin/eslint ./src",
     "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
     "postpretty": "yarn lint --fix",
-    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register"
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
+    "runQuery": "babel-node ./src/utils/runQuery"   
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
+    "express-validation": "^3.0.8",
     "http-errors": "~1.6.3",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pg": "^8.6.0",
+    "pug": "2.0.0-beta11",
+    "sequelize": "^6.6.2",
+    "uuidv4": "^6.2.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
